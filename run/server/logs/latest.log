@@ -1,0 +1,55 @@
+[18mar.2023 18:14:53.451] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserveruserdev, --gameDir, ., --fml.forgeVersion, 43.2.3, --fml.mcVersion, 1.19.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220805.130853]
+[18mar.2023 18:14:53.457] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.8+10.0.8+main.0ef7e830 starting: java version 17.0.6 by Amazon.com Inc.; OS Linux arch amd64 version 5.19.0-35-generic
+[18mar.2023 18:14:53.584] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/emerson/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23115!/ Service=ModLauncher Env=SERVER
+[18mar.2023 18:14:53.893] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/emerson/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.19.2-43.2.3/45687785dd2c4c0a44768b7d49d78a7d0d95a074/javafmllanguage-1.19.2-43.2.3.jar is missing mods.toml file
+[18mar.2023 18:14:53.895] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/emerson/.gradle/caches/modules-2/files-2.1/net.minecraftforge/lowcodelanguage/1.19.2-43.2.3/a277cdb1c183feb61bfc17268fa67689c1c111dc/lowcodelanguage-1.19.2-43.2.3.jar is missing mods.toml file
+[18mar.2023 18:14:53.896] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/emerson/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.19.2-43.2.3/4397f2bd6f775ca187878e0ae5917fed0436e0d9/mclanguage-1.19.2-43.2.3.jar is missing mods.toml file
+[18mar.2023 18:14:53.898] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/emerson/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.19.2-43.2.3/afe360ce5e3041882fcd8bbf1550fa822619a7b8/fmlcore-1.19.2-43.2.3.jar is missing mods.toml file
+[18mar.2023 18:14:54.101] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 3 dependencies adding them to mods collection
+[18mar.2023 18:14:55.240] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserveruserdev' with arguments [--gameDir, .]
+[18mar.2023 18:14:58.274] [main/INFO] [net.minecraft.util.datafix.DataFixers/]: Building unoptimized datafixer
+[18mar.2023 18:14:59.701] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 43.2.3, for MC 1.19.2 with MCP 20220805.130853
+[18mar.2023 18:14:59.703] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v43.2.3 Initialized
+[18mar.2023 18:14:59.941] [modloading-worker-0/INFO] [skyward/]: Starting Skyward Realms Minecraft Modification - Version 0.0.1
+[18mar.2023 18:14:59.942] [modloading-worker-0/INFO] [thedarkcolour.kotlinforforge.test.KotlinForForge/]: Kotlin For Forge Enabled!
+[18mar.2023 18:15:00.210] [modloading-worker-0/INFO] [skyward/]: Server starting...
+[18mar.2023 18:15:00.347] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[18mar.2023 18:15:00.946] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 43.2.3 Target: 43.2.7
+[18mar.2023 18:15:06.479] [modloading-worker-0/INFO] [skyward/]: Server Version: 0.0.1
+[18mar.2023 18:15:07.249] [main/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[18mar.2023 18:15:07.302] [main/WARN] [net.minecraftforge.common.ForgeHooks/WP]: The following mods have version differences that were not resolved:
+skyward (version 0.0NONE -> 0.0.1)
+Things may not work well.
+[18mar.2023 18:15:07.716] [main/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/home/emerson/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.19.2-43.2.3_mapped_official_1.19.2/forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/assets/.mcassetsroot' uses unexpected schema
+[18mar.2023 18:15:07.716] [main/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/home/emerson/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.19.2-43.2.3_mapped_official_1.19.2/forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/data/.mcassetsroot' uses unexpected schema
+[18mar.2023 18:15:09.237] [main/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 7 recipes
+[18mar.2023 18:15:09.532] [main/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1179 advancements
+[18mar.2023 18:15:10.109] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Starting minecraft server version 1.19.2
+[18mar.2023 18:15:10.110] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Loading properties
+[18mar.2023 18:15:10.110] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Default game type: SURVIVAL
+[18mar.2023 18:15:10.110] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[18mar.2023 18:15:10.213] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Starting Minecraft server on *:25565
+[18mar.2023 18:15:10.249] [Server thread/INFO] [net.minecraft.server.network.ServerConnectionListener/]: Using epoll channel type
+[18mar.2023 18:15:10.400] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Preparing level "world"
+[18mar.2023 18:15:10.676] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[18mar.2023 18:15:12.843] [Worker-Main-2/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18mar.2023 18:15:12.845] [Worker-Main-7/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18mar.2023 18:15:12.846] [Worker-Main-2/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18mar.2023 18:15:12.846] [Worker-Main-2/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18mar.2023 18:15:12.847] [Worker-Main-2/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[18mar.2023 18:15:13.177] [Worker-Main-6/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 12%
+[18mar.2023 18:15:13.677] [Worker-Main-7/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 72%
+[18mar.2023 18:15:13.852] [Server thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 3176 ms
+[18mar.2023 18:15:13.853] [Server thread/INFO] [net.minecraft.server.dedicated.DedicatedServer/]: Done (3.486s)! For help, type "help"
+[18mar.2023 18:15:13.859] [Server thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [skyward]
+[18mar.2023 18:15:13.865] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[18mar.2023 18:15:17.115] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[18mar.2023 18:15:17.116] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[18mar.2023 18:15:17.116] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[18mar.2023 18:15:17.956] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[18mar.2023 18:15:18.543] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[18mar.2023 18:15:18.544] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[18mar.2023 18:15:18.568] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[18mar.2023 18:15:18.569] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[18mar.2023 18:15:18.569] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[18mar.2023 18:15:18.569] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved

@@ -1,0 +1,100 @@
+---- Minecraft Crash Report ----
+// Sorry :(
+
+Time: 2023-03-19 01:15:43
+Description: Exception in server tick loop
+
+java.lang.NoClassDefFoundError: org/json/simple/JSONObject
+	at com.graceful.skyward.client.event.EventHandler.onPlayerJoinWorld(EventHandler.kt:41) ~[%23185!/:?] {re:classloading}
+	at com.graceful.skyward.client.event.__EventHandler_onPlayerJoinWorld_EntityJoinLevelEvent.invoke(.dynamic) ~[%23185!/:?] {re:classloading,pl:eventbus:B}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73) ~[eventbus-6.0.3.jar%23102!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:315) ~[eventbus-6.0.3.jar%23102!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:296) ~[eventbus-6.0.3.jar%23102!/:?] {}
+	at net.minecraft.server.level.ServerLevel.addPlayer(ServerLevel.java:788) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.addNewPlayer(ServerLevel.java:780) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.players.PlayerList.placeNewPlayer(PlayerList.java:198) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading}
+	at net.minecraft.server.network.ServerLoginPacketListenerImpl.placeNewPlayer(ServerLoginPacketListenerImpl.java:156) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.network.ServerLoginPacketListenerImpl.handleAcceptedLogin(ServerLoginPacketListenerImpl.java:143) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.network.ServerLoginPacketListenerImpl.tick(ServerLoginPacketListenerImpl.java:75) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.network.Connection.tick(Connection.java:248) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading}
+	at net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:143) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:880) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:806) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:84) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:654) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:244) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) [?:?] {}
+Caused by: java.lang.ClassNotFoundException: org.json.simple.JSONObject
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[?:?] {}
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?] {}
+	at cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:137) ~[securejarhandler-2.1.4.jar:?] {}
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?] {}
+	at cpw.mods.cl.ModuleClassLoader.loadClass(ModuleClassLoader.java:137) ~[securejarhandler-2.1.4.jar:?] {}
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?] {}
+	... 19 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.19.2
+	Minecraft Version ID: 1.19.2
+	Operating System: Linux (amd64) version 5.19.0-35-generic
+	Java Version: 17.0.6, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Amazon.com Inc.
+	Memory: 587256928 bytes (560 MiB) / 1814036480 bytes (1730 MiB) up to 2573205504 bytes (2454 MiB)
+	CPUs: 16
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 7 5700U with Radeon Graphics
+	Identifier: AuthenticAMD Family 23 Model 104 Stepping 1
+	Microarchitecture: unknown
+	Frequency (GHz): 4.37
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 16
+	Graphics card #0 name: Lucienne
+	Graphics card #0 vendor: Advanced Micro Devices, Inc. [AMD/ATI] (0x1002)
+	Graphics card #0 VRAM (MB): 258.00
+	Graphics card #0 deviceId: 0x164c
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MB): 15698.72
+	Virtual memory used (MB): 13605.04
+	Swap memory total (MB): 10793.07
+	Swap memory used (MB): 4140.59
+	JVM Flags: 0 total; 
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/152, l='ServerLevel[New World]', x=-56.19, y=75.00, z=552.57]]
+	Data Packs: vanilla, mod:kotlinforforge (incompatible), mod:forge, mod:skyward
+	World Generation: Stable
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	Launched Version: MOD_DEV
+	ModLauncher: 10.0.8+10.0.8+main.0ef7e830
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.3.jar eventbus PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.3.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.3.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.3.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.3.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.3.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.8.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.8.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		javafml@null
+		kotlinforforge@3.9.1
+		lowcodefml@null
+	Mod List: 
+		forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.|Minecraft                     |minecraft                     |1.19.2              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		kffmod-3.9.1.jar                                  |Kotlin For Forge              |kotlinforforge                |3.9.1               |DONE      |Manifest: NOSIGNATURE
+		                                                  |Forge                         |forge                         |43.2.3              |DONE      |Manifest: NOSIGNATURE
+		main                                              |Skyward Realms                |skyward                       |0.0.1               |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 32917130-ed5f-4f1e-97fc-7dfaa8ef891d
+	FML: 43.2
+	Forge: net.minecraftforge:43.2.3

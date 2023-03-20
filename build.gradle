@@ -4,6 +4,7 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.8.0'
     // OPTIONAL Kotlin Serialization plugin
     id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.0'
+
 }
 
 version = '1.0.0'
@@ -88,13 +89,16 @@ repositories {
         url = 'https://thedarkcolour.github.io/KotlinForForge/'
         content { includeGroup "thedarkcolour" }
     }
+    mavenCentral()
 }
 
 dependencies {
     // Use the latest version of Minecraft Forge
     minecraft 'net.minecraftforge:forge:1.19.2-43.2.3'
-
     implementation 'thedarkcolour:kotlinforforge:3.9.1'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.14'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
 }
 
 compileKotlin {
