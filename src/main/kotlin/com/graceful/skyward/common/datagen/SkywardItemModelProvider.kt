@@ -1,6 +1,7 @@
 package com.graceful.skyward.common.datagen
 
 import com.graceful.skyward.common.Skyward
+import com.graceful.skyward.common.block.SkywardBlocks
 import com.graceful.skyward.common.item.SkywardItems
 import net.minecraft.data.DataGenerator
 import net.minecraft.resources.ResourceLocation
@@ -16,6 +17,8 @@ class SkywardItemModelProvider(dataGenerator: DataGenerator, existingFileHelper:
 
     override fun registerModels() {
         simpleItem(SkywardItems.purpleGlowstone)
+
+        withExistingParent(SkywardBlocks.purpleGlowstoneBlock.blockName, modLoc("block/${SkywardBlocks.purpleGlowstoneBlock.blockName}"))
     }
 
     private fun simpleItem(item: RegistryObject<Item>): ItemModelBuilder? {
@@ -24,7 +27,7 @@ class SkywardItemModelProvider(dataGenerator: DataGenerator, existingFileHelper:
             ResourceLocation("item/generated")
         ).texture(
             "layer0",
-            ResourceLocation(Skyward.modId, "item/" + item.id.path)
+            ResourceLocation("skyward", "item/" + item.id.path)
         )
     }
 

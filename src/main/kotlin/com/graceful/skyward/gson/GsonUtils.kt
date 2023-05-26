@@ -14,4 +14,9 @@ object GsonUtils {
         val mapType = object : TypeToken<Map<String, Any>>() {}.type
         return gson.fromJson(jsonString, mapType)
     }
+
+    fun getMutableMapFromJson(jsonString: String): MutableMap<String, String> {
+        val mapType = object : TypeToken<Map<String, Any>>() {}.type
+        return gson.fromJson(jsonString, mapType)
+    }
 }

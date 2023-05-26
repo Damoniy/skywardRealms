@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "skyward:wing_jade",
+    "skyward:wing_ruby",
+    "skyward:wing_topaz",
+    "skyward:wing_sapphire",
+    "skyward:wing_tourmaline",
+    "skyward:wing_base"
+  ]
+}

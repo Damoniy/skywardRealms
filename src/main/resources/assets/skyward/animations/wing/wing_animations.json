@@ -1,0 +1,46 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.wings.flight": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"right_side": {
+					"rotation": {
+						"0.0": [0, -22.5, 0],
+						"0.5": [0, 17.5, 0],
+						"1.0": [0, -25.5, 0]
+					}
+				},
+				"left_side": {
+					"rotation": {
+						"0.0": [0, 22.5, 0],
+						"0.5": [0, -2, 0],
+						"1.0": [0, 23, 0]
+					}
+				}
+			}
+		},
+		"animation.wings.idle": {
+			"loop": true,
+			"animation_length": 4,
+			"bones": {
+				"right_side": {
+					"rotation": {
+						"0.0": [0, -20, 0],
+						"2.0": [0, 18.5, 0],
+						"4.0": [0, -19, 0]
+					}
+				},
+				"left_side": {
+					"rotation": {
+						"0.0": [0, 20, 0],
+						"2.0417": [0, -20.5, 0],
+						"4.0": [0, 20, 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

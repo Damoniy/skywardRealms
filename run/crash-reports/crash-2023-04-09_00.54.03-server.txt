@@ -1,0 +1,130 @@
+---- Minecraft Crash Report ----
+// I feel sad now :(
+
+Time: 2023-04-09 00:54:03
+Description: Ticking player
+
+java.lang.ArrayIndexOutOfBoundsException: Index 38 out of bounds for length 4
+	at java.util.Arrays$ArrayList.get(Arrays.java:4165) ~[?:?] {}
+	at net.minecraft.core.NonNullList.get(NonNullList.java:43) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading}
+	at com.graceful.skyward.client.event.EventHandler.tickFlying(EventHandler.kt:111) ~[%23185!/:?] {re:classloading}
+	at com.graceful.skyward.client.event.EventHandler.onPlayerTick(EventHandler.kt:106) ~[%23185!/:?] {re:classloading}
+	at com.graceful.skyward.client.event.__EventHandler_onPlayerTick_PlayerTickEvent.invoke(.dynamic) ~[%23185!/:?] {re:classloading,pl:eventbus:B}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73) ~[eventbus-6.0.3.jar%23102!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:315) ~[eventbus-6.0.3.jar%23102!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:296) ~[eventbus-6.0.3.jar%23102!/:?] {}
+	at net.minecraftforge.event.ForgeEventFactory.onPlayerPreTick(ForgeEventFactory.java:805) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23179%23186!/:?] {re:classloading}
+	at net.minecraft.world.entity.player.Player.tick(Player.java:216) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerPlayer.doTick(ServerPlayer.java:447) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.tick(ServerGamePacketListenerImpl.java:264) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading}
+	at net.minecraft.network.Connection.tick(Connection.java:248) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading}
+	at net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:143) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:880) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:806) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:84) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:654) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:244) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) [?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at java.util.Arrays$ArrayList.get(Arrays.java:4165) ~[?:?] {}
+	at net.minecraft.core.NonNullList.get(NonNullList.java:43) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading}
+	at com.graceful.skyward.client.event.EventHandler.tickFlying(EventHandler.kt:111) ~[%23185!/:?] {re:classloading}
+	at com.graceful.skyward.client.event.EventHandler.onPlayerTick(EventHandler.kt:106) ~[%23185!/:?] {re:classloading}
+	at com.graceful.skyward.client.event.__EventHandler_onPlayerTick_PlayerTickEvent.invoke(.dynamic) ~[%23185!/:?] {re:classloading,pl:eventbus:B}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73) ~[eventbus-6.0.3.jar%23102!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:315) ~[eventbus-6.0.3.jar%23102!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:296) ~[eventbus-6.0.3.jar%23102!/:?] {}
+	at net.minecraftforge.event.ForgeEventFactory.onPlayerPreTick(ForgeEventFactory.java:805) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23179%23186!/:?] {re:classloading}
+	at net.minecraft.world.entity.player.Player.tick(Player.java:216) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+-- Player being ticked --
+Details:
+	Entity Type: minecraft:player (net.minecraft.server.level.ServerPlayer)
+	Entity ID: 92
+	Entity Name: Dev
+	Entity's Exact location: -761.27, 69.41, -732.38
+	Entity's Block location: World: (-762,69,-733), Section: (at 6,5,3 in -48,4,-46; chunk contains blocks -768,-64,-736 to -753,319,-721), Region: (-2,-2; contains chunks -64,-64 to -33,-33, blocks -1024,-64,-1024 to -513,319,-513)
+	Entity's Momentum: 0.00, 0.00, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at net.minecraft.server.level.ServerPlayer.doTick(ServerPlayer.java:447) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.tick(ServerGamePacketListenerImpl.java:264) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading}
+	at net.minecraft.network.Connection.tick(Connection.java:248) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading}
+	at net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:143) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:880) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:806) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:84) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:654) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:244) ~[forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.jar%23180!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) [?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.19.2
+	Minecraft Version ID: 1.19.2
+	Operating System: Linux (amd64) version 5.19.0-35-generic
+	Java Version: 17.0.6, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Amazon.com Inc.
+	Memory: 995715512 bytes (949 MiB) / 1887436800 bytes (1800 MiB) up to 2573205504 bytes (2454 MiB)
+	CPUs: 16
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 7 5700U with Radeon Graphics
+	Identifier: AuthenticAMD Family 23 Model 104 Stepping 1
+	Microarchitecture: unknown
+	Frequency (GHz): 4.37
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 16
+	Graphics card #0 name: Lucienne
+	Graphics card #0 vendor: Advanced Micro Devices, Inc. [AMD/ATI] (0x1002)
+	Graphics card #0 VRAM (MB): 258.00
+	Graphics card #0 deviceId: 0x164c
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MB): 15698.72
+	Virtual memory used (MB): 16339.62
+	Swap memory total (MB): 10793.07
+	Swap memory used (MB): 6838.20
+	JVM Flags: 0 total; 
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/92, l='ServerLevel[Skyrealms Server]', x=-761.27, y=69.41, z=-732.38]]
+	Data Packs: vanilla, mod:kotlinforforge (incompatible), mod:forge, mod:skyward (incompatible), mod:geckolib3 (incompatible)
+	World Generation: Stable
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	Launched Version: MOD_DEV
+	ModLauncher: 10.0.8+10.0.8+main.0ef7e830
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.3.jar eventbus PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.3.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.3.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.3.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.3.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.3.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.8.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.8.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		javafml@null
+		kotlinforforge@3.9.1
+		lowcodefml@null
+	Mod List: 
+		forge-1.19.2-43.2.3_mapped_official_1.19.2-recomp.|Minecraft                     |minecraft                     |1.19.2              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		kffmod-3.9.1.jar                                  |Kotlin For Forge              |kotlinforforge                |3.9.1               |DONE      |Manifest: NOSIGNATURE
+		                                                  |Forge                         |forge                         |43.2.3              |DONE      |Manifest: NOSIGNATURE
+		geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.|GeckoLib                      |geckolib3                     |3.1.40              |DONE      |Manifest: NOSIGNATURE
+		main                                              |Skyward Realms                |skyward                       |0.0.1               |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 8a736f8c-a4a9-48e4-9287-dfdd447650da
+	FML: 43.2
+	Forge: net.minecraftforge:43.2.3
